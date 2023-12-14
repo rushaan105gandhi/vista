@@ -1,0 +1,10 @@
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+const firebaseConfig = {
+    apiKey: "AIzaSyBkHyZUMRbbuYrYJuF7TiWOTRAkRnJ9Hm4",
+    authDomain: "vista-application.firebaseapp.com",
+    projectId: "vista-application",
+    storageBucket: "vista-application.appspot.com",
+    messagingSenderId: "334101543951",
+    appId: "1:334101543951:web:beb1c8a5eb4f441e8fb77a",
+    measurementId: "G-DQ35QYEC5D"
+  };

@@ -1,11 +1,11 @@
 import React from 'react'
-import { ReactComponent as Logo } from './logo.svg';
+import logo from './vista.png';
 import './Header.css'
 
 function Header() {
   return (
     <div className='header'>
-        <Logo className='header__logo' />
+        <img className='header__logo' src= {logo} />
 
         <div className='header__search'>
             <input className='header__searchInput' type = 'text'/>

@@ -6,10 +6,26 @@ import './Home.css';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
+import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 import Product from './Product';
 
+const CustomPrevArrow = (props) => (
+  <div className="custom-arrow custom-prev-arrow" onClick={props.onClick}>
+    <FaChevronLeft />
+  </div>
+);
+
+const CustomNextArrow = (props) => (
+  <div className="custom-arrow custom-next-arrow" onClick={props.onClick}>
+    <FaChevronRight />
+  </div>
+);
+
 const properties = {
-  dots: true,
+  dots: false,
+  arrows: true,
+  prevArrow: <CustomPrevArrow />,
+  nextArrow: <CustomNextArrow />,
   infinite: true,
   speed: 500,
   slidesToShow: 1,
@@ -39,7 +55,7 @@ function Home() {
         {/* <img className='home__image' src={visclave625} alt='visclave' /> */}
         <div className='home__row'>
           <Product />
-          {/* Product Component */}
+          <Product />
         </div>
 
         <div className='home__row'>

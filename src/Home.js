@@ -6,6 +6,7 @@ import './Home.css';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
+import Product from './Product';
 
 const properties = {
   dots: true,
@@ -15,6 +16,7 @@ const properties = {
   slidesToScroll: 1,
   autoplay: true,
   pauseOnHover: true,
+  fade: true,
  };
 
 function Home() {
@@ -36,7 +38,7 @@ function Home() {
         </Slider> 
         {/* <img className='home__image' src={visclave625} alt='visclave' /> */}
         <div className='home__row'>
-          {/* Product Component */}
+          <Product />
           {/* Product Component */}
         </div>
 

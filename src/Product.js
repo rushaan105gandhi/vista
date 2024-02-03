@@ -1,9 +1,8 @@
 import React, { useState } from 'react';
 import "./Product.css";
 import StarRatings from 'react-star-ratings';
-import vRedM from './vRedM.png'
 
-function Product() {
+function Product({title, image, price}) {
 
   const [rating, setRating] = useState(3);
   const handleRatingChange = newRating => {
@@ -13,10 +12,10 @@ function Product() {
   return (
     <div className='product'>
       <div className='product__info'>
-        <p>Red-M Dry Syrup</p>
+        <p>{title}</p>
         <p className='product__price'>
           <small>₹</small>
-          <strong>24.9</strong>
+          <strong>{price}</strong>
         </p>
         <div className='product__rating'>
           <StarRatings
@@ -30,7 +29,7 @@ function Product() {
           />
         </div>
       </div>
-      <img src={vRedM} alt='RedM'></img>
+      <img src={image} alt='RedM'></img>
       <button>Add to Cart</button>
     </div>
   )

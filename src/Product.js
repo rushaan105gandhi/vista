@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import "./Product.css";
 import StarRatings from 'react-star-ratings';
 
-function Product({title, image, price}) {
+function Product({id, title, image, price}) {
 
   const [rating, setRating] = useState(3);
   const handleRatingChange = newRating => {
@@ -30,7 +30,7 @@ function Product({title, image, price}) {
         </div>
       </div>
       <img src={image} alt='RedM'></img>
-      <button>Add to Cart</button>
+      <button>Add to Kit</button>
     </div>
   )
 }

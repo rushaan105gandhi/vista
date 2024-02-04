@@ -8,7 +8,7 @@ function App() {
   return (
     <BrowserRouter>
       <div className="app">
-        <Header /> {/* Header should be outside Routes */}
+        <Header /> 
         <Routes>
           <Route path="/checkout" element={<h1>I am a checkout</h1>} />
           <Route path="/" element={<Home />} />

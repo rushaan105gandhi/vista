@@ -1,0 +1,12 @@
+.checkout{
+    display: flex;
+    padding: 20px;
+    background-color: white;
+    height: max-content;
+}
+
+.checkout__banner{
+    width: 100%;
+    height: 25%;
+   margin-bottom: 10px;
+}

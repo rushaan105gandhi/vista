@@ -1,12 +1,31 @@
 import React, { useState } from 'react';
 import "./Product.css";
 import StarRatings from 'react-star-ratings';
+import { useStateValue  } from './StateProvider'
 
 function Product({id, title, image, price}) {
+  
+  const [{ basket }, dispatch] = useStateValue();
+
+  console.log("Basket: ", basket);
 
   const [rating, setRating] = useState(3);
+  
   const handleRatingChange = newRating => {
     setRating(newRating);
+  };
+
+  const addToBasket = () => {
+    //dispatch the item into the Data Layer
+    dispatch({
+      type: 'ADD_TO_BASKET', 
+      item: {
+        id: id,
+        title: title,
+        image: image,
+        price: price,
+      },
+    });
   };
 
   return (
@@ -30,7 +49,7 @@ function Product({id, title, image, price}) {
         </div>
       </div>
       <img src={image} alt='RedM'></img>
-      <button>Add to Kit</button>
+      <button onClick={addToBasket}>Add to Kit</button>
     </div>
   )
 }

@@ -59,7 +59,7 @@ function Login() {
             <button className='login__signinButton' type='submit' onClick={signIn}>Sign-In</button>
           </form>
           <p>
-            T & C
+            Terms and Conditions apply.
           </p>
           <button className='login__signupButton' onClick={register}>
             Register

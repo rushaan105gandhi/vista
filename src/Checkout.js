@@ -21,10 +21,6 @@ function Checkout() {
                     price={item.price}
                   />
                 ))}
-                {/* basketitem */}
-                {/* basketitem */}
-                {/* basketitem */}
-                {/* basketitem */}
             </div>
         </div>
 
